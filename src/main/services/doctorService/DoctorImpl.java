@@ -66,7 +66,7 @@ public class DoctorImpl implements DoctorInterface {
     public String add(Long hospitalId, Doctor doctor) {
         doctorDao.hospitalDao.getAllHospitals().stream().filter(hospital -> hospital.getId().equals(hospitalId)).findFirst().orElseThrow(() -> new NotFound("Not found"));
         while (true) {
-            System.out.println("Write last name: ");
+            System.out.println("Write first name: ");
             String name = new Scanner(System.in).nextLine();
             if (GenericChecks.checforName(name)) {
                 doctor.setFirstName(name);

@@ -385,10 +385,11 @@ public class Main {
                                                 }
                                                 patcient.setAge(Integer.parseInt(split1[3]));
                                                 patcients.add(patcient);
-                                                System.out.println(patcientService.myadd(id, patcients));
-                                                System.out.println(patcients);
+
                                             } else System.out.println("Write correct info");
                                         }
+                                        System.out.println(patcientService.myadd(id, patcients));
+                                        System.out.println(patcients);
                                     } else System.out.println("Write correct id!");
                                 } catch (InputMismatchException exception) {
                                     printforException();
